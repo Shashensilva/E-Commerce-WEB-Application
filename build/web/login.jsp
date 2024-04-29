@@ -1,8 +1,6 @@
 
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<!-- Coding by CodingNepal | www.codingnepalweb.com-->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -233,6 +231,26 @@ body{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+    
+    
+    <%  String msg = (String) request.getAttribute("error");  
+
+
+
+  if (msg!=null) {
+
+
+
+%>
+
+
+
+ <div class="warning-message">
+     <p><%=msg%></p>
+</div>  
+          
+          
+<% } %>
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -255,15 +273,15 @@ body{
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <form action="Login" method="POST">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="text" name="email" placeholder="email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" name="password" placeholder="Password" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
@@ -299,5 +317,31 @@ body{
     </div>
     </div>
   </div>
+  
+    <style>
+        
+        
+        .warning-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid red;
+  padding: 20px;
+  text-align: center;
+}
+
+.warning-message p {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+        
+        
+        
+        
+        
+    </style>
     </body>
 </html>
