@@ -233,7 +233,7 @@ body{
 <body>
     
     
-    <%  String msg = (String) request.getAttribute("error");  
+<%  String msg = (String) request.getAttribute("error");  
 
 
 

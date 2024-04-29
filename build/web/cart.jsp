@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn update__btn">
-                                <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
+                                <a href="checkout.jsp"><i class="fa fa-spinner"></i> Update cart</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <li>Subtotal <span>$ 169.50</span></li>
                             <li>Total <span>$ <%=Total%></span></li>
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                        <a href="checkout.jsp" class="primary-btn">Proceed to checkout</a>
                     </div>
                 </div>
             </div>

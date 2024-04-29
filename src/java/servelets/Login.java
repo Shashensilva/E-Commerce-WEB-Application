@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package servelets;
 
 import java.io.IOException;
@@ -14,10 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author laksh
- */
+
 public class Login extends HttpServlet {
 
     /**
@@ -88,18 +81,18 @@ public class Login extends HttpServlet {
         
         
         
-        if (email.equals(user_email)  ) {
+        if ( email.equals(user_email)   ) {
         
-        
+        int user_id = db.get_user_id(email, Password);     
         HttpSession session = request.getSession();
-        session.setAttribute("user_name", user_email);
+        session.setAttribute("user_email", user_email);
+        session.setAttribute("user_id", user_id);
         response.sendRedirect("index.jsp");
         
         
         } else {
             
-            
-        
+   
         request.setAttribute("error", "Email or Password Incorrect!");
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
