@@ -8,6 +8,10 @@
         <servlet-name>CartQuantityUpdate</servlet-name>
         <servlet-class>servelets.CartQuantityUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>servelets.Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
         <url-pattern>/add-to-cart</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>CartQuantityUpdate</servlet-name>
         <url-pattern>/CartQuantityUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
