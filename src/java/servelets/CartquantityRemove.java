@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Servelets;
+
+package servelets;
 
 import DataModel.CartData;
 import java.io.IOException;
@@ -19,7 +15,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author laksh
  */
-public class cartproductremove extends HttpServlet {
+public class CartquantityRemove extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +34,10 @@ public class cartproductremove extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet cartproductremove</title>");            
+            out.println("<title>Servlet CartquantityRemove</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet cartproductremove at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CartquantityRemove at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -59,9 +55,9 @@ public class cartproductremove extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+
         
-        
+           
           try (PrintWriter out = response.getWriter()) {
              
              
@@ -102,9 +98,6 @@ public class cartproductremove extends HttpServlet {
          
          
          }
-        
-        
-        
     }
 
     /**

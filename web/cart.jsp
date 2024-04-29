@@ -58,7 +58,7 @@
                                     
                                     <% double subTotal = p.getP_Price()*p.getQuentity();  %>
                                     <td class="cart__price">$ <%= subTotal %></td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
+                                    <td><a href="CartquantityRemove?PID=<%= p.getPID() %>"><i class="fa fa-close"></i></a></td>
                                 </tr>
                                
                            <% }}  %>

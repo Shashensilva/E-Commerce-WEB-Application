@@ -16,6 +16,14 @@
         <servlet-name>cartproductremove</servlet-name>
         <servlet-class>servelets.cartproductremove</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>cartqytremove</servlet-name>
+        <servlet-class>servelets.cartqytremove</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartquantityRemove</servlet-name>
+        <servlet-class>servelets.CartquantityRemove</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
         <url-pattern>/add-to-cart</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>cartproductremove</servlet-name>
         <url-pattern>/cartproductremove</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cartqytremove</servlet-name>
+        <url-pattern>/cart-remove</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartquantityRemove</servlet-name>
+        <url-pattern>/CartquantityRemove</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
