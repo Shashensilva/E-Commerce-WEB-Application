@@ -121,6 +121,48 @@ public class database {
     return user_email;
 }
  
+ 
+   public int create_User(String Name ,String Email , String Password ) {
+           
+        int  rowAffected = 0;
+
+        try {
+
+      
+
+           
+
+            String sql = "INSERT INTO user (UserName, Email, Password) VALUES (?, ?, ?)";
+            
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            
+            pstmt.setString(1, Name);
+            pstmt.setString(2, Email);
+            pstmt.setString(3, Password);
+            
+            rowAffected = pstmt.executeUpdate();
+            if (rowAffected > 0) {
+             System.out.println("A new user was inserted successfully!");
+            } else {
+             System.out.println("Failed to insert the user!");
+            }
+
+            
+
+            conn.close();
+            
+          
+
+        } catch (Exception e) {
+
+           e.printStackTrace();
+
+        }
+        
+          return rowAffected;
+    }
+       
+ 
 
   
      
