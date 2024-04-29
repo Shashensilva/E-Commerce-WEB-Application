@@ -4,6 +4,7 @@ package servelets;
 
 import DataModel.CartData;
 import DataModel.ProductData;
+import DataModel.orders;
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.sql.*;
 import java.util.*;
@@ -193,6 +194,38 @@ public class database {
     }
     
     return p_data;
+}
+    
+    
+    public List<orders>  getOrdersByUserId(int userId) {
+    List<orders> orderList = new ArrayList<>();
+    
+    try {
+        String sql = "SELECT * FROM `order` WHERE UserId = ?;";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, userId);
+        ResultSet orders_data = pstmt.executeQuery();
+
+        while (orders_data.next()) {
+          orders order = new orders();
+          order.setOid(orders_data.getInt("UserId"));
+          order.setPID(orders_data.getInt("PID"));
+          order.setBilling_Address(orders_data.getString("Billing_Address"));
+          order.setQuantity(orders_data.getInt("Quantity"));
+          order.setMobile(orders_data.getString("Mobile"));
+          order.setEmail(orders_data.getString("Email"));
+          order.setPrice(orders_data.getDouble("price"));
+          
+          orderList.add(order);
+            
+        }
+    } catch (SQLException e) {
+        System.out.println("Error: " + e.getMessage());
+        e.printStackTrace();
+    }
+    
+    
+    return orderList;
 }
     
   
