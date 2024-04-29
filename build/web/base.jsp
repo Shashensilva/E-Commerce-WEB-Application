@@ -12,6 +12,7 @@
     
     
    int Product_count = 0;
+   int TotalPrice = 0;
 
 %>
 
@@ -114,12 +115,16 @@
                                     
                                     
                                     if(bla != null) {
-                        
+                      
                                     
-                                    for (CartData p : bla ) { Product_count+=1; }}%>
+                                    for (CartData p : bla ) { 
+                                         Product_count+=1;
+                                         TotalPrice += p.getP_Price() * p.getQuentity();
+                                    }
+                         }%>
                         <a href="cart.jsp"><img src="img/icon/cart.png" alt=""> <span><%=Product_count%></span></a>
 
-                        <div class="price">$0.00</div>
+                        <div class="price">$<%=TotalPrice%></div>
                     </div>
                 </div>
             </div>
