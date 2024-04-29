@@ -92,7 +92,35 @@ public class database {
     }
     
     
+       
+ public String get_user_by_email(String email, String password) {
+     
+    String user_email = "";
+
+    try {
+        String sql = "SELECT * FROM user WHERE Email=? AND Password=?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, email);
+        pstmt.setString(2, password);
+        ResultSet user_data = pstmt.executeQuery();
+        
+        // Check if there's any result
+        if (user_data.next()) {
+            user_email = user_data.getString("Email");
+           
+        }
+        
+        // Close ResultSet and PreparedStatement
+        
+        pstmt.close();
+    } catch (SQLException e) {
+        // Properly handle exceptions
+        e.printStackTrace();
+    }
     
+    return user_email;
+}
+ 
 
   
      
