@@ -131,7 +131,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
                         <a href="ProductView?PID=<%= product.getPID() %>" >      
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg"> 
+                        <div class="product__item__pic set-bg" data-setbg="<%= product.getP_image()%>"> 
                         </div>
                         </a>
                         <div class="product__item__text">
