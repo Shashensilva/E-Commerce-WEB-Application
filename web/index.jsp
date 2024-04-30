@@ -130,13 +130,10 @@
             
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                            <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                            </ul>
+                        <a href="ProductView?PID=<%= product.getPID() %>" >      
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg"> 
                         </div>
+                        </a>
                         <div class="product__item__text">
                             <h6><%=product.getP_Name() %></h6>
                             <a href="add-to-cart?id=<%=product.getPID()%>" class="add-cart">+ Add To Cart</a>
