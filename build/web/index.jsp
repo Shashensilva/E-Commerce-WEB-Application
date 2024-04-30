@@ -237,9 +237,9 @@
                 <div class="col-lg-4">
                     <div class="instagram__text">
                         <h2>Instagram</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                        <h3>#Male_Fashion</h3>
+                        <p>Explore our exclusive collection, curated with distinct styles and unparalleled craftsmanship, 
+                           to elevate your wardrobe with timeless elegance and individuality.</p>
+                        
                     </div>
                 </div>
             </div>
