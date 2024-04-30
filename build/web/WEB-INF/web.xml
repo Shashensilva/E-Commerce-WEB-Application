@@ -24,6 +24,10 @@
         <servlet-name>CartquantityRemove</servlet-name>
         <servlet-class>servelets.CartquantityRemove</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PlaceOrder</servlet-name>
+        <servlet-class>servelets.PlaceOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
         <url-pattern>/add-to-cart</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>CartquantityRemove</servlet-name>
         <url-pattern>/CartquantityRemove</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlaceOrder</servlet-name>
+        <url-pattern>/PlaceOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
