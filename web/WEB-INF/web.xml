@@ -28,6 +28,10 @@
         <servlet-name>PlaceOrder</servlet-name>
         <servlet-class>servelets.PlaceOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addProduct</servlet-name>
+        <servlet-class>servelets.addProduct</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
         <url-pattern>/add-to-cart</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>PlaceOrder</servlet-name>
         <url-pattern>/PlaceOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addProduct</servlet-name>
+        <url-pattern>/addProduct</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
