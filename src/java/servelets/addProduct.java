@@ -102,7 +102,7 @@ public class addProduct extends HttpServlet {
         String uploadPath = "Uploads/" + imageFileName;
         System.out.println("Upload Path : " + uploadPath);
         
-        String path = "C:\\Users\\laksh\\OneDrive\\Documents\\NetBeansProjects\\DEA\\DEA-Web-Application\\web\\Uploads\\"+imageFileName;
+        String path = "C:\\Users\\laksh\\OneDrive\\Documents\\NetBeansProjects\\E-Commerce-WEB-Application\\web\\Uploads\\"+imageFileName;
     
              
             FileOutputStream fos = new FileOutputStream(path);
@@ -128,7 +128,7 @@ public class addProduct extends HttpServlet {
             if (rowAffected==1) {
             
             System.out.println(rowAffected);
-            
+            response.sendRedirect("Admin.jsp");
             }
            
             
