@@ -39,7 +39,7 @@
       <th scope="col">Product Name</th>
       <th scope="col">Billing Address</th>
       <th scope="col">Quality</th>
-      <th scope="col">Mobile Number</th>
+      <th scope="col">Total Price</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -67,7 +67,11 @@
       <td><%= order.getPID()%></td>
       <td><%= order.getBilling_Address()%></td>
       <td><%= order.getQuantity()%></td>
-      <td><%= order.getMobile()%></td>
+      
+      <%  double Total = order.getQuantity()*order.getPrice(); %>
+      
+      
+      <td>$<%= Total %></td>
       <th scope="col"></th>
     </tr>
     
