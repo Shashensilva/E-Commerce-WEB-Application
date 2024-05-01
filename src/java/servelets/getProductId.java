@@ -1,18 +1,23 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package servelets;
 
-import DataModel.CartData;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-public class ProductView extends HttpServlet {
+/**
+ *
+ * @author laksh
+ */
+public class getProductId extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,10 +36,10 @@ public class ProductView extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductView</title>");            
+            out.println("<title>Servlet getProductId</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductView at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet getProductId at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -52,45 +57,27 @@ public class ProductView extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
+       
         try {
         
-        int PID =  Integer.parseInt(request.getParameter("PID"));
+        int PID = Integer.parseInt(request.getParameter("PID"));
         
-        database db = new database();
         
-        List<CartData> products = db.get_Product_data_by_id(PID);
+        request.setAttribute("PID", PID);
         
-        CartData product = products.get(0);
-        
-         request.setAttribute("P_Name", product.getP_Name() );
-         request.setAttribute("P_description", product.getP_description());
-         request.setAttribute("P_Price", product.getP_Price());
-         request.setAttribute("P_image", product.getP_image());
-         request.setAttribute("PID", product.getPID() );
-         request.setAttribute("Quentity", product.getQuentity());
-        
-                
-                
-        RequestDispatcher dispatcher = request.getRequestDispatcher("shop-details.jsp");
+         RequestDispatcher dispatcher = request.getRequestDispatcher("product-update.jsp");
         dispatcher.forward(request, response);
-        response.sendRedirect("Singal-details.jsp");
+        response.sendRedirect("product-update.jsp");
         
         
         
         } catch(Exception e) {
         
+        
         System.out.println(e);
         
         
         }
-        
-        
-        
-        
-        
-        
         
         
         

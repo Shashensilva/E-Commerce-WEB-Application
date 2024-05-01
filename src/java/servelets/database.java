@@ -230,6 +230,7 @@ public class database {
             Product_data.setP_Name(product.getString("P_Name"));
             Product_data.setP_Price(product.getInt("P_Price"));
             Product_data.setP_description(product.getString("P_description"));
+            Product_data.setP_image(product.getString("image"));
             p_data.add(Product_data);
         }
         
@@ -376,6 +377,91 @@ public class database {
     
     return orderList;
 }
+ 
+ 
+ 
+ public int delete_product_by_id(int PID) {
+     
+     int rowsAffected =0;
+ 
+     try{
+         
+         
+         
+          String sql = "DELETE FROM product WHERE PID = ?";
+          
+          PreparedStatement pstmt = conn.prepareStatement(sql);
+          
+          pstmt.setInt(1, PID);
+          
+          
+          rowsAffected = pstmt.executeUpdate();
+          if (rowsAffected > 0) {
+          System.out.println("Item deleted successfully.");
+          } else {
+          System.out.println("Item not found or deletion failed.");
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        } catch(Exception e) {
+ 
+ 
+         System.out.println(e);
+ 
+ 
+ }
+ 
+ 
+    return rowsAffected;
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+public int product_details_update(String P_Name, int P_Quantity, String P_description, int P_Price, int A_ID, String image, int PID) {
+    int rowAffected = 0;
+    try {
+        String sql = "UPDATE product SET P_Name = ?, P_Quantity = ?, P_description = ?, P_Price = ?, image = ?, A_ID = ? WHERE PID = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        
+        
+        System.out.println( P_Name+  P_Quantity+  P_description+  P_Price+  A_ID+  image+  PID);
+
+        pstmt.setString(1, P_Name);
+        pstmt.setInt(2, P_Quantity);
+        pstmt.setString(3, P_description);
+        pstmt.setInt(4, P_Price);
+        pstmt.setString(5, image);
+        pstmt.setInt(6, A_ID);
+        pstmt.setInt(7, PID);
+
+        rowAffected = pstmt.executeUpdate();
+
+        if (rowAffected > 0) {
+            System.out.println("Item Updated successfully.");
+        } else {
+            System.out.println("Item not found or Update failed.");
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return rowAffected;
+}
+
+ 
+ 
+ 
+ 
 
   
   

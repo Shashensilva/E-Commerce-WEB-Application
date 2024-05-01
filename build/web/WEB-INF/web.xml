@@ -36,6 +36,18 @@
         <servlet-name>ProductView</servlet-name>
         <servlet-class>servelets.ProductView</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductUpdate</servlet-name>
+        <servlet-class>servelets.ProductUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productRemove</servlet-name>
+        <servlet-class>servelets.productRemove</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getProductId</servlet-name>
+        <servlet-class>servelets.getProductId</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
         <url-pattern>/add-to-cart</url-pattern>
@@ -71,6 +83,18 @@
     <servlet-mapping>
         <servlet-name>ProductView</servlet-name>
         <url-pattern>/ProductView</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductUpdate</servlet-name>
+        <url-pattern>/ProductUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productRemove</servlet-name>
+        <url-pattern>/productRemove</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getProductId</servlet-name>
+        <url-pattern>/getProductId</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -32,7 +32,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__pic__item">
-                                    <img src="<%= P_image %> " alt="">
+                                    <img src="<%=P_image %>" alt="bla">
                                 </div>
                             </div>
                            
