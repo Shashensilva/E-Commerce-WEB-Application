@@ -12,7 +12,7 @@
     
     
    int Product_count = 0;
-
+ int total_price =0 ;
 %>
 
 
@@ -97,8 +97,8 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.jsp">Home</a></li>
-                            <li><a href="./shop.jsp">Shop</a></li>
+                            <li class="active"><a href="index.jsp">Home</a></li>
+                            <li><a href="shop.jsp">Shop</a></li>
                             <li><a href="./contact.html">Contacts</a></li>
                         </ul>
                     </nav>
@@ -120,7 +120,7 @@
            
            
            
-           
+                                   total_price += p.getP_Price()* p.getQuentity();
            
            
            
@@ -128,7 +128,7 @@
            }}%>
                         <a href="cart.jsp"><img src="img/icon/cart.png" alt=""> <span><%=Product_count%></span></a>
 
-                        <div class="price">$0.00</div>
+                        <div class="price">$<%= total_price %></div>
                     </div>
                 </div>
             </div>
