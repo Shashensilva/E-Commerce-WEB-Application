@@ -112,62 +112,49 @@
     </section>
     <!-- Banner Section End -->
 
-    <!-- Product Section Begin -->
-    <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="filter__controls">
-                        <li class="active" data-filter="*">Best Sellers</li>
-                       
-                    </ul>
-                </div>
+   <section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="filter__controls">
+                    <li class="active" data-filter="*">Best Sellers</li>
+                </ul>
             </div>
-            <div class="row product__filter">
-                
-               
-             <% for (ProductData product : products ) { %>
-            
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+        </div>
+        <div class="row product__filter">
+            <% for (ProductData product : products ) { %>
+                <div class="col-lg-3 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <a href="ProductView?PID=<%= product.getPID() %>" >      
-                        <div class="product__item__pic set-bg" data-setbg="<%= product.getP_image()%>"> 
-                        </div>
-                        </a>
-                        <div class="product__item__text">
-                            <h6><%=product.getP_Name() %></h6>
-                            <a href="add-to-cart?id=<%=product.getPID()%>" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
+                        <a href="ProductView?PID=<%= product.getPID() %>">      
+                            <div class="product__item__pic set-bg" data-setbg="<%= product.getP_image() %>">
+                                <img src="<%= product.getP_image() %>" alt="<%= product.getP_Name() %>">
                             </div>
-                            <h5>$<%=product.getP_Price() %></h5>
+                        </a>
+                            
+                   
+                            <br/>
+                            <br/>
+                            <br/>
+                        <div class="product__item__text">
+                           
+                            <h6><%= product.getP_Name() %></h6>
+                            <a href="add-to-cart?id=<%= product.getPID() %>" class="add-cart">+ Add To Cart</a>
+                           
+                            
+                            <h5>$<%= product.getP_Price() %></h5>
                             <div class="product__color__select">
-                                <label for="pc-4">
-                                    <input type="radio" id="pc-4">
+                                <label for="pc-<%= product.getPID() %>">
+                                    <input type="radio" id="pc-<%= product.getPID() %>">
                                 </label>
-                                <label class="active black" for="pc-5">
-                                    <input type="radio" id="pc-5">
-                                </label>
-                                <label class="grey" for="pc-6">
-                                    <input type="radio" id="pc-6">
-                                </label>
+                                <!-- Add more color options if applicable -->
                             </div>
                         </div>
                     </div>
                 </div>
-               
-         <% } %>
-       
-          
-      
-            </div>
+            <% } %>
         </div>
-    </section>
-    <!-- Product Section End -->
+    </div>
+</section>
 
     <!-- Categories Section Begin -->
     <section class="categories spad">
