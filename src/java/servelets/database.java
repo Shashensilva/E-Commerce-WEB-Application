@@ -231,6 +231,7 @@ public class database {
             Product_data.setP_Price(product.getInt("P_Price"));
             Product_data.setP_description(product.getString("P_description"));
             Product_data.setP_image(product.getString("image"));
+            Product_data.setP_Quantity(product.getInt("P_Quantity"));
             p_data.add(Product_data);
         }
         

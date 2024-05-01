@@ -99,11 +99,25 @@ public class PlaceOrder extends HttpServlet {
      
        
             
-        int rewAffected = db.order_place(user_id, address, mobile, email, product.getPID(), product.getQuentity(),product.getP_Price() );
+        int rowAffected = db.order_place(user_id, address, mobile, email, product.getPID(), product.getQuentity(),product.getP_Price() );
         
         out.println(user_id +","+ address +","+ mobile +","+ email +","+ product.getPID() +","+ product.getQuentity());
         
-        out.println(rewAffected);
+        
+        
+        
+        if (rowAffected >0 ) {
+        
+        session.removeAttribute("cart-list");
+        response.sendRedirect("thankyou.jsp");
+        
+        
+        }
+        
+        
+        
+        
+        
         }
         
         
@@ -116,8 +130,8 @@ public class PlaceOrder extends HttpServlet {
         }
         
         
-        session.removeAttribute("cart-list");
-        response.sendRedirect("index.jsp");
+        
+        
         
         
         

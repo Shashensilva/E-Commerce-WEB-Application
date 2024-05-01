@@ -116,7 +116,16 @@
                                     if(bla != null) {
                         
                                     
-                                    for (CartData p : bla ) { Product_count+=1; }}%>
+                                    for (CartData p : bla ) { Product_count+=1; 
+           
+           
+           
+           
+           
+           
+           
+           
+           }}%>
                         <a href="cart.jsp"><img src="img/icon/cart.png" alt=""> <span><%=Product_count%></span></a>
 
                         <div class="price">$0.00</div>

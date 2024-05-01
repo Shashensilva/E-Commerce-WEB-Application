@@ -4,6 +4,41 @@
 <%@page import="DataModel.ProductData"%>
 <%@page import="servelets.database"%>
 <%@include file="Admin-base.jsp" %>
+
+
+
+
+<%  String error = (String) request.getAttribute("error"); 
+
+  String success = (String) request.getAttribute("success");
+
+
+
+  if (success!=null) {
+
+
+
+%>
+
+<div class="alert alert-success" role="alert">
+ <%=success%>
+</div>
+
+  
+ 
+          
+<% } else if (error!=null) { %>
+
+<div class="alert alert-danger" role="alert">
+  <%=error%>
+</div>
+
+
+<%} %>
+
+
+
+
   
 
 <style>
