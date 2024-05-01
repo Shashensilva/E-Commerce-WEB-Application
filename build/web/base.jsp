@@ -91,22 +91,30 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="index.jsp">Home</a></li>
-                            <li><a href="shop.jsp">Shop</a></li>
+                            <li><a href="Shop.jsp">Shop</a></li>
                             <li><a href="./contact.html">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                       
+                         <% if(user_email != null) {%>
+
+                         <a href="MyAccount.jsp"><p>My Account</p></a>
+
+                                <%}%>
+                        
+                        
+                        
+                       
 
                        
 
