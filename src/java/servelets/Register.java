@@ -3,6 +3,7 @@ package servelets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -77,9 +78,9 @@ public class Register extends HttpServlet {
          
          if ("register".equals(method)) {
          
-         String uname = request.getParameter("user-name");
-         String password = request.getParameter("user-password");
-         String Email = request.getParameter("user-email");
+         String uname = request.getParameter("name");
+         String password = request.getParameter("password");
+         String Email = request.getParameter("Email");
          
          database db = new database();
          
@@ -91,11 +92,21 @@ public class Register extends HttpServlet {
               HttpSession session = request.getSession();
               
               session.setAttribute("User_id", uname);
-              response.sendRedirect("index.jsp");
-              response.setStatus(HttpServletResponse.SC_OK); 
+              
+              
+              request.setAttribute("Success", "Account Created!");
+        
+              RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+              dispatcher.forward(request, response);
              
              
              }else {
+                 
+                 
+                 request.setAttribute("error", "Please try again!");
+        
+              RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+              dispatcher.forward(request, response);
              
              response.setStatus(HttpServletResponse.SC_FORBIDDEN); 
 
