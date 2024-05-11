@@ -48,7 +48,7 @@ public class database {
     
     
     
-       public int create_User(String Name ,String Email , String Password ) {
+       public int User_register(String Name ,String Email , String Password ) {
            
         int  rowAffected = 0;
 
@@ -277,7 +277,7 @@ public class database {
     return user_email;
 }
  
- public int order_place(int UserId, String address, String mobile, String Email, int PID, int Quantity , double price) {
+ public int Create_Order(int UserId, String address, String mobile, String Email, int PID, int Quantity , double price) {
     
 
    int rowsAffected = 0;
@@ -311,7 +311,7 @@ public class database {
   
   
   
-  public int get_user_id(String Email, String Password) {
+  public int Get_user_using_id(String Email, String Password) {
   
   int user_id = 0; 
   try {

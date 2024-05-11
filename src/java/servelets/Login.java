@@ -83,7 +83,7 @@ public class Login extends HttpServlet {
         
         if ( email.equals(user_email)   ) {
         
-        int user_id = db.get_user_id(email, Password);     
+        int user_id = db.Get_user_using_id(email, Password);     
         HttpSession session = request.getSession();
         session.setAttribute("user_email", user_email);
         session.setAttribute("user_id", user_id);

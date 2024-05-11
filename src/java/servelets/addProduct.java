@@ -124,7 +124,7 @@ public class addProduct extends HttpServlet {
             }
             
             database db = new database();
-            int rowAffected = db.add_Product(P_Name, P_Quantity, P_description, P_Price, UID, uploadPath);
+            int rowAffected = db.Create_Product(P_Name, P_Quantity, P_description, P_Price, UID, uploadPath);
             
             if (rowAffected > 0) {
             

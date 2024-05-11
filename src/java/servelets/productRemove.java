@@ -73,7 +73,7 @@ public class productRemove extends HttpServlet {
         
         database db = new database();
         
-        int rowAffected = db.delete_product_by_id(PID);
+        int rowAffected = db.delete_product(PID);
         
         if (rowAffected>0) {
         

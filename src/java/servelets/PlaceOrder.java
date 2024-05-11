@@ -99,7 +99,7 @@ public class PlaceOrder extends HttpServlet {
      
        
             
-        int rowAffected = db.order_place(user_id, address, mobile, email, product.getPID(), product.getQuentity(),product.getP_Price() );
+        int rowAffected = db.Create_Order(user_id, address, mobile, email, product.getPID(), product.getQuentity(),product.getP_Price() );
         
         out.println(user_id +","+ address +","+ mobile +","+ email +","+ product.getPID() +","+ product.getQuentity());
         

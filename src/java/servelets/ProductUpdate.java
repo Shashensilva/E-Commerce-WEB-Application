@@ -131,7 +131,7 @@ public class ProductUpdate extends HttpServlet {
     }
     
     database db = new database();
-    int rowAffected = db.product_details_update(P_Name, P_Quantity, P_description, P_Price, A_ID, uploadPath, PID);
+    int rowAffected = db.Product_Edit(P_Name, P_Quantity, P_description, P_Price, A_ID, uploadPath, PID);
     
     if (rowAffected > 0) {
        

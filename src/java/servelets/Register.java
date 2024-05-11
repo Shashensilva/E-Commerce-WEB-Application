@@ -84,7 +84,7 @@ public class Register extends HttpServlet {
          
          database db = new database();
          
-         int check = db.create_User(uname, Email, password);
+         int check = db.User_register(uname, Email, password);
          
          
              if (check==1){
